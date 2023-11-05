@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vianda</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style-planes.css">
+    <script src="https://kit.fontawesome.com/62f6c64ea9.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500&family=Kanit&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Gabarito:wght@500&family=Kanit&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:wght@300&family=Lato&family=Montserrat:wght@500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="./images/icono/Logo.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="navbar-menu">
+                <div class="header-logo"><img id="logo" src="./images/Logo.PNG" alt="Logo de Vianda Expres"></div>
+                <div class="navbar-menulist">
+                    <a href="./main.html" target="_self"><i class="fa-solid fa-house"></i>
+                        Home</a>
+                    <a href="./aboutus.html" target="_self"><i class="fa-solid fa-bowl-food"></i> Quienes somos</a>
+                    <a href="./planes.html" target="_self"><i class="fa-solid fa-bowl-food"></i> Planes</a>
+                    <a href="./zonaEntregas.html" target="_self"><i class="fa-solid fa-bowl-food"></i> Zonas de
+                        entrega</a>
+                    <a href="./contacto.html" target="_self"><i class="fa-solid fa-bowl-food"></i> Contacto</a>
+                </div>
+                <!-- 
+                <div class="btn-menu"><i class="fa-solid fa-bars"></i></div> -->
+            </div>
+        </nav>
+    </header>
+    <div class="contenido-contacto">
+        <div class="grid-area1">
+            <p><a href="tel:+541122223333">Contáctanos</a> para recibir viandas saludables o dietéticas en la comodidad
+                de tu hogar.</p>
+            <!-- Es un numero de contacto ficticio -->
+        </div>
+        <div class="grid-area2">
+            <p>Conoce la ubicación de Vianda Exprés haciendo click <a href="https://maps.app.goo.gl/Tkfv1dnxaFsyf3zB7">
+                    aquí</a>.</p>
+            <!-- Es una direccion ficticia -->
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1181.351675038668!2d-58.458941055173476!3d-34.5650665263845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5d6a2361e0b%3A0x61864c4e183c6177!2sMoldes%2C%20C1428%20CRD%2C%20Buenos%20Aires!5e0!3m2!1sen!2sar!4v1697146645546!5m2!1sen!2sar"
+                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <form id="form" action="submit" class="grid-area3">
+            <p>¿Deseas conocer más sobre nuestros planes?<br>
+                Escribinos y nos comunicaremos a la brevedad.</p>
+            <label for="Nombre">Nombre</label><br>
+            <input name="Nombre" id="Nombre" type="text" placeholder="Escribe tu nombre...">
+
+            <i class="fas fa-exclamation-circle iconoFailure"></i>
+            <i class="far fa-check-circle iconoSuccess"></i>
+            <div class="error"></div>
+
+            <label for="Email">Email</label><br>
+            <input type="email" name="Email" id="Email" placeholder="example@example.com">
+
+            <i class="fas fa-exclamation-circle iconoFailure"></i>
+            <i class="far fa-check-circle iconoSuccess"></i>
+            <div class="error"></div>
+
+            <label for="Asunto">Asunto</label><br>
+            <input type="text" name="Asunto" id="Asunto" placeholder="Ingrese el asunto...">
+
+            <i class="fas fa-exclamation-circle iconoFailure"></i>
+            <i class="far fa-check-circle iconoSuccess"></i>
+            <div class="error"></div>
+
+            <label for="Comentario">Comentario</label><br>
+            <textarea name="Comentario" id="Comentario" cols="30" rows="10"
+                placeholder="Deje su comentario o consulta..."></textarea>
+
+            <i class="fas fa-exclamation-circle iconoFailure"></i>
+            <i class="far fa-check-circle iconoSuccess"></i>
+            <div class="error"></div>
+
+            <button type="submit" class="btn-enviar">Enviar</button>
+
+        </form>
+    </div>
+
+    <a href="https://wa.me/541136071400?text=Me%20gustaría%20más%20info%20de%20los%20planes" class="whatsapp"
+        target="_blank"> <i class="fa fa-whatsapp whatsapp-icon"></i></a>
+
+    <footer>
+        <div class="footer-icons">
+            <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+        <div>
+            <p>Derechos Reservados @2023</p>
+        </div>
+    </footer>
+
+</body>
+<script src="./script/script.js"></script>
+
+</html>
