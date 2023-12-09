@@ -6,7 +6,7 @@
 header {
     background-color: #5C8C3D;
     padding: 30px 0;
-    background-image: url(/Codigo/images/background-image-color.jpg);
+    background-image: url(/Frontend/images/background-image-color.jpg);
     background-size: cover;
 }
 
@@ -48,6 +48,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 .navbar-menu {
@@ -107,6 +108,7 @@ body {
     border-radius: 10px;
     margin: 20px auto;
     padding-top: 20px;
+    box-shadow: 4px 8px 10px 5px #a09f9f;
 }
 
 .planes-preview h2 {
@@ -140,6 +142,7 @@ body {
     height: 100%;
     max-width: 400px;
     object-fit: cover;
+    box-shadow: 4px 8px 10px 3px #442626a3;
 
 }
 
@@ -152,7 +155,8 @@ body {
 .btn-planes button {
     padding: 5px 10px;
     border-radius: 5px;
-    margin-top: 5px;
+    background-color: #f9f7f7;
+    margin-top: 10px;
     width: 200px;
     transition: all .5s ease;
 }

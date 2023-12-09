@@ -1,0 +1,31 @@
+.contenido-subscripcion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #d7d7d7;
+}
+
+.form {
+    background-color: #ffffff;
+    margin: 36px auto;
+    padding: 30px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .form-contenido {} */
+
+.form p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    width: 85%;
+}
+
+.form label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    align-content: left;
+}

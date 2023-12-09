@@ -7,6 +7,7 @@
     <title>Vianda</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/style-planes.css">
+    <link rel="stylesheet" href="./css/style-subscripcion.css">
     <script src="https://kit.fontawesome.com/62f6c64ea9.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,57 +43,63 @@
             </div>
         </nav>
     </header>
-    <div class="contenido-contacto">
-        <div class="grid-area1">
-            <p><a href="tel:+541122223333">Contáctanos</a> para recibir viandas saludables o dietéticas en la comodidad
-                de tu hogar.</p>
-            <!-- Es un numero de contacto ficticio -->
-        </div>
-        <div class="grid-area2">
-            <p>Conoce la ubicación de Vianda Exprés haciendo click <a href="https://maps.app.goo.gl/Tkfv1dnxaFsyf3zB7">
-                    aquí</a>.</p>
-            <!-- Es una direccion ficticia -->
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1181.351675038668!2d-58.458941055173476!3d-34.5650665263845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5d6a2361e0b%3A0x61864c4e183c6177!2sMoldes%2C%20C1428%20CRD%2C%20Buenos%20Aires!5e0!3m2!1sen!2sar!4v1697146645546!5m2!1sen!2sar"
-                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        <form id="form" action="submit" class="grid-area3">
-            <p>¿Deseas conocer más sobre nuestros planes?<br>
-                Escribinos y nos comunicaremos a la brevedad.</p>
-            <label for="Nombre">Nombre</label><br>
-            <input name="Nombre" id="Nombre" type="text" placeholder="Escribe tu nombre...">
+    <section class="contenido-subscripcion">
 
-            <i class="fas fa-exclamation-circle iconoFailure"></i>
-            <i class="far fa-check-circle iconoSuccess"></i>
-            <div class="error"></div>
+        <form id="form" action="submit" class="form">
+            <div class="form-contenido">
+                <p>¡Estás a un paso de recibir un plan pensado solo para ti!<br>
+                    Completá este formulario para subscribirte</p>
+                <label for="nombre">Nombre</label><br>
+                <input name="nombre" id="nombre" type="text" placeholder="Escribe tu nombre...">
 
-            <label for="Email">Email</label><br>
-            <input type="email" name="Email" id="Email" placeholder="example@example.com">
+                <i class="fas fa-exclamation-circle iconoFailure"></i>
+                <i class="far fa-check-circle iconoSuccess"></i>
+                <div class="error"></div>
 
-            <i class="fas fa-exclamation-circle iconoFailure"></i>
-            <i class="far fa-check-circle iconoSuccess"></i>
-            <div class="error"></div>
+                <label for="apellido">Apellido</label><br>
+                <input name="apellido" id="apellido" type="text" placeholder="Escribe tu apellido..." class="label">
 
-            <label for="Asunto">Asunto</label><br>
-            <input type="text" name="Asunto" id="Asunto" placeholder="Ingrese el asunto...">
+                <i class="fas fa-exclamation-circle iconoFailure"></i>
+                <i class="far fa-check-circle iconoSuccess"></i>
+                <div class="error"></div>
 
-            <i class="fas fa-exclamation-circle iconoFailure"></i>
-            <i class="far fa-check-circle iconoSuccess"></i>
-            <div class="error"></div>
+                <label for="email">Email</label><br>
+                <input type="email" name="email" id="email" placeholder="example@example.com">
 
-            <label for="Comentario">Comentario</label><br>
-            <textarea name="Comentario" id="Comentario" cols="30" rows="10"
-                placeholder="Deje su comentario o consulta..."></textarea>
+                <i class="fas fa-exclamation-circle iconoFailure"></i>
+                <i class="far fa-check-circle iconoSuccess"></i>
+                <div class="error"></div>
 
-            <i class="fas fa-exclamation-circle iconoFailure"></i>
-            <i class="far fa-check-circle iconoSuccess"></i>
-            <div class="error"></div>
+                <label for="telefono">Teléfono</label><br>
+                <input type="number" name="telefono" id="telefono" placeholder="Escribe tu teléfono...">
+
+                <i class="fas fa-exclamation-circle iconoFailure"></i>
+                <i class="far fa-check-circle iconoSuccess"></i>
+                <div class="error"></div>
+
+                <label for="combo">Plan</label>
+                <select name="Asunto" id="Asunto">
+                    <option value="0"></option>
+                    <option value="1">Plan descenso saludable</option>
+                    <option value="2">Plan infantil</option>
+                    <option value="3">Plan vegetariano</option>
+                    <option value="4">Plan light</option>
+                </select><br>
+
+                <label for="Comentario">Comentario</label><br>
+                <textarea name="Comentario" id="Comentario" cols="30" rows="10"
+                    placeholder="Deje su comentario: preferencias, condición alimenticia, alergias, entre otros."></textarea>
+
+                <i class="fas fa-exclamation-circle iconoFailure"></i>
+                <i class="far fa-check-circle iconoSuccess"></i>
+                <div class="error"></div>
+
+            </div>
 
             <button type="submit" class="btn-enviar">Enviar</button>
 
         </form>
-    </div>
+    </section>
 
     <a href="https://wa.me/541136071400?text=Me%20gustaría%20más%20info%20de%20los%20planes" class="whatsapp"
         target="_blank"> <i class="fa fa-whatsapp whatsapp-icon"></i></a>

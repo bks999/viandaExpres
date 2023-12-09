@@ -2,10 +2,12 @@ let id = (id) => document.getElementById(id);
 
 let classes = (classes) => document.getElementsByClassName(classes);
 
-let Nombre = id("Nombre"),
-    Email = id("Email"),
-    Asunto = id("Asunto"),
-    Comentario = id("Comentario"),
+let Nombre = id("nombre"),
+    Apellido = id("apellido"),
+    Email = id("email"),
+    Telefono = id("telefono"),
+    Combo = id("combo"),
+    Comentario = id("comentario"),
     Formulario = id("form"),
     mensajeError = classes("error"),
     iconoSuccess = classes("iconoSuccess"),

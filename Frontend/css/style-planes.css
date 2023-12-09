@@ -50,6 +50,7 @@ body {
     scroll-behavior: smooth;
     border-radius: 0.5rem;
     position: relative;
+    box-shadow: 4px 8px 10px 3px #a09f9f;
 }
 
 .plan-content img {
@@ -57,6 +58,7 @@ body {
     scroll-snap-align: start;
     object-fit: cover;
     bottom: 1.25rem;
+
 }
 
 .carrusel-nav {
@@ -74,9 +76,10 @@ body {
     width: 2vw;
     height: 2vw;
     border-radius: 50%;
-    background-color: #042;
+    background-color: rgb(56, 94, 71);
     opacity: 0.75;
     transition: opacity ease 250ms;
+    box-shadow: 2px 2px 2px 2px #54705f87;
 }
 
 .carrusel-nav a:hover {
