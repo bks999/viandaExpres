@@ -48,10 +48,10 @@ class Cliente:
             apellido varchar(30) NOT NULL,
             telefono varchar(15) NOT NULL,
             email varchar(60) NOT NULL,
-            combo int(11) NOT NULL,
+            
             comentario text NOT NULL,
             fecha_solicitud datetime NOT NULL,
-            leido tinyint(1) NOT NULL,
+            leido tinyint(1) DEFAULT NULL,
             gestion text DEFAULT NULL,
             fecha_gestion datetime DEFAULT NULL,
             PRIMARY KEY(`id`)
@@ -63,10 +63,10 @@ class Cliente:
         self.cursor = self.conn.cursor(dictionary=True)
         
     #----------------------------------------------------------------
-    def enviar_datos_cliente(self, nombre, apellido, telefono, email, combo, comentario):
-        sql = "INSERT INTO subscriptores(nombre, apellido, telefono, email, combo, comentario, fecha_solicitud) VALUES (%s, %s, %s, %s, %s, %s, %s)"
+    def enviar_datos_cliente(self, nombre, apellido, telefono, email, comentario):
+        sql = "INSERT INTO subscriptores(nombre, apellido, telefono, email, comentario, fecha_solicitud) VALUES (%s, %s, %s, %s, %s, %s)"
         fecha_solicitud = datetime.datetime.now()
-        valores = (nombre, apellido, telefono, email, combo, comentario, fecha_solicitud)
+        valores = (nombre, apellido, telefono, email, comentario, fecha_solicitud)
         self.cursor.execute(sql, valores)        
         self.conn.commit()
         return True
@@ -119,10 +119,10 @@ def enviar_datos_cliente():
     apellido = request.form['apellido']
     telefono = request.form['telefono']
     email = request.form['email']
-    combo = request.form['combo']
+    #combo = request.form['combo']
     comentario = request.form['comentario']  
 
-    if cliente.enviar_datos_cliente(nombre, apellido, telefono, email, combo, comentario):
+    if cliente.enviar_datos_cliente(nombre, apellido, telefono, email, comentario):
         return jsonify({"mensaje": "Subscripción exitosa"}), 201
     else:
         return jsonify({"mensaje": "No fue posible registrar la subscripción"}), 400
