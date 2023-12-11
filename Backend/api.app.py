@@ -18,13 +18,12 @@ CORS(app, resources={r"/*": {"origins": "*"}})
 
 class Cliente:
     #constructor de la clase
-    def __init__(self, host, user, password, database, port):
+    def __init__(self, host, user, password, database):
         self.conn = mysql.connector.connect(
             host=host,
             user=user,
             password=password,
             database=database,
-            port=port
         )
         self.cursor = self.conn.cursor()
 
@@ -59,7 +58,7 @@ class Cliente:
         
     #----------------------------------------------------------------
     def enviar_datos_cliente(self, nombre, apellido, telefono, email, combo, comentario):
-        sql = "INSERT INTO subscriptores(nombre, apellido, telefono, email, combo, comentario, fecha_solicitud) VALUES (%s, %s, %s, %s, %s, %s)"
+        sql = "INSERT INTO subscriptores(nombre, apellido, telefono, email, combo, comentario, fecha_solicitud) VALUES (%s, %s, %s, %s, %s, %s, %s)"
         fecha_solicitud = datetime.datetime.now()
         valores = (nombre, apellido, telefono, email, combo, comentario, fecha_solicitud)
         self.cursor.execute(sql, valores)        
@@ -95,7 +94,7 @@ class Cliente:
 
 
 # Creamos el objeto
-cliente = Cliente("localhost","root","","subscripciones","3307")
+cliente = Cliente("bks999.mysql.pythonanywhere-services.com","bks999","viandaExpres","bks999$subscripcion")
 
 #--------------------------------------------------------------------
 @app.route("/subscripcion", methods=["GET"])

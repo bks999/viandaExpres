@@ -4,7 +4,7 @@ document.getElementById('form-subscribe').addEventListener('submit', function (e
     const formData = new FormData(document.getElementById('form-subscribe'));
 
     // Realizar el envío utilizando fetch
-    fetch('http://127.0.0.1:5000/subscripcion', {
+    fetch('http://bks999.pythonanywhere.com/subscripcion', {
         method: 'POST',
         body: formData
     })
@@ -21,7 +21,7 @@ document.getElementById('form-subscribe').addEventListener('submit', function (e
                     document.getElementById('form-subscribe').reset();
                     document.getElementById('form-subscribe').style.display = 'block';
                     document.getElementById('mensajeEnviado').style.display = 'none';
-                }, 2000);
+                }, 10000);
             } else {
                 throw new Error('Error al enviar los datos');
             }

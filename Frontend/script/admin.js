@@ -1,5 +1,5 @@
 document.getElementById('btnTraerMensajes').addEventListener('click', () => {
-    fetch('http://127.0.0.1:5000/subscripcion')
+    fetch('https://bks999.pythonanywhere.com/subscripcion')
         .then(response => response.json())
         .then(datos => {
             console.log("datos", datos)
@@ -11,11 +11,13 @@ document.getElementById('btnTraerMensajes').addEventListener('click', () => {
                 const fila = document.createElement('tr');
                 fila.innerHTML = `
                     <td>${dato.id}</td>
-                    <td>${dato.apellido}</td>
                     <td>${dato.nombre}</td>
+                    <td>${dato.apellido}</td>
                     <td>${dato.email}</td>
-                    <td>${dato.fecha_solicitud}</td>
+                    <td>${dato.telefono}</td>
+                    <td>${dato.combo}</td>
                     <td>${dato.comentario}</td>
+                    <td>${dato.fecha_solicitud}</td>
                     <td>${dato.leido}</td>
                     <td>${dato.gestion}</td>
                     <td>${dato.fecha_gestion}</td>
@@ -38,7 +40,7 @@ document.getElementById('formularioGestion').addEventListener('submit', function
     const formData = new FormData();
     formData.append('gestion', gestion); // Agregar el detalle a los datos del formulario
 
-    fetch(`http://127.0.0.1:5000/subscripcion/${id}`, {
+    fetch(`http://bks999.pythonanywhere.com/subscripcion/${id}`, {
         method: 'PUT',
         body: formData
     })
