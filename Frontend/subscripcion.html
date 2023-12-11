@@ -45,54 +45,34 @@
     </header>
     <section class="contenido-subscripcion">
 
-        <form id="form" action="submit" class="form">
+        <form id="form-subscribe" action="submit" class="form">
             <div class="form-contenido">
                 <p>¡Estás a un paso de recibir un plan pensado solo para ti!<br>
                     Completá este formulario para subscribirte</p>
                 <label for="nombre">Nombre</label><br>
                 <input name="nombre" id="nombre" type="text" placeholder="Escribe tu nombre...">
 
-                <i class="fas fa-exclamation-circle iconoFailure"></i>
-                <i class="far fa-check-circle iconoSuccess"></i>
-                <div class="error"></div>
-
                 <label for="apellido">Apellido</label><br>
                 <input name="apellido" id="apellido" type="text" placeholder="Escribe tu apellido..." class="label">
-
-                <i class="fas fa-exclamation-circle iconoFailure"></i>
-                <i class="far fa-check-circle iconoSuccess"></i>
-                <div class="error"></div>
 
                 <label for="email">Email</label><br>
                 <input type="email" name="email" id="email" placeholder="example@example.com">
 
-                <i class="fas fa-exclamation-circle iconoFailure"></i>
-                <i class="far fa-check-circle iconoSuccess"></i>
-                <div class="error"></div>
-
                 <label for="telefono">Teléfono</label><br>
-                <input type="number" name="telefono" id="telefono" placeholder="Escribe tu teléfono...">
-
-                <i class="fas fa-exclamation-circle iconoFailure"></i>
-                <i class="far fa-check-circle iconoSuccess"></i>
-                <div class="error"></div>
+                <input type="number" name="telefono" id="telefono" placeholder="Escribe tu teléfono..."><br>
 
                 <label for="combo">Plan</label>
-                <select name="Asunto" id="Asunto">
+                <select name="combo" id="combo">
                     <option value="0"></option>
                     <option value="1">Plan descenso saludable</option>
                     <option value="2">Plan infantil</option>
                     <option value="3">Plan vegetariano</option>
                     <option value="4">Plan light</option>
                 </select><br>
-
+                <br>
                 <label for="comentario">Comentario</label><br>
                 <textarea name="comentario" id="comentario" cols="30" rows="10"
                     placeholder="Deje su comentario: preferencias, condición alimenticia, alergias, entre otros."></textarea>
-
-                <i class="fas fa-exclamation-circle iconoFailure"></i>
-                <i class="far fa-check-circle iconoSuccess"></i>
-                <div class="error"></div>
 
             </div>
 
@@ -115,6 +95,7 @@
             <p>Derechos Reservados @2023</p>
         </div>
     </footer>
-
 </body>
-<script src="./script/script.js"></script>
+<script src="./script/subscripcion.js"></script>
+
+</html>

@@ -1,22 +1,17 @@
 #--------------------------------------------------------------------
 from flask import Flask, request, jsonify
-#from flask import request
 
 from flask_cors import CORS
 
-
-# Instalar con pip install mysql-connector-python
 import mysql.connector
 
-# No es necesario instalar, es parte del sistema standard de Python
 import os
+
 import time, datetime
 #--------------------------------------------------------------------
 
-
 app = Flask(__name__)
 
-# Permitir acceso desde cualquier origen externo
 CORS(app, resources={r"/*": {"origins": "*"}}) 
 
 #--------------------------------------------------------------------
@@ -48,7 +43,7 @@ class Cliente:
             apellido varchar(30) NOT NULL,
             telefono varchar(15) NOT NULL,
             email varchar(60) NOT NULL,
-            
+            combo int(11) NOT NULL,
             comentario text NOT NULL,
             fecha_solicitud datetime NOT NULL,
             leido tinyint(1) DEFAULT NULL,
@@ -63,10 +58,10 @@ class Cliente:
         self.cursor = self.conn.cursor(dictionary=True)
         
     #----------------------------------------------------------------
-    def enviar_datos_cliente(self, nombre, apellido, telefono, email, comentario):
-        sql = "INSERT INTO subscriptores(nombre, apellido, telefono, email, comentario, fecha_solicitud) VALUES (%s, %s, %s, %s, %s, %s)"
+    def enviar_datos_cliente(self, nombre, apellido, telefono, email, combo, comentario):
+        sql = "INSERT INTO subscriptores(nombre, apellido, telefono, email, combo, comentario, fecha_solicitud) VALUES (%s, %s, %s, %s, %s, %s)"
         fecha_solicitud = datetime.datetime.now()
-        valores = (nombre, apellido, telefono, email, comentario, fecha_solicitud)
+        valores = (nombre, apellido, telefono, email, combo, comentario, fecha_solicitud)
         self.cursor.execute(sql, valores)        
         self.conn.commit()
         return True
@@ -102,8 +97,6 @@ class Cliente:
 # Creamos el objeto
 cliente = Cliente("localhost","root","","subscripciones","3307")
 
-
-
 #--------------------------------------------------------------------
 @app.route("/subscripcion", methods=["GET"])
 def listar_clientes():
@@ -119,10 +112,10 @@ def enviar_datos_cliente():
     apellido = request.form['apellido']
     telefono = request.form['telefono']
     email = request.form['email']
-    #combo = request.form['combo']
+    combo = request.form['combo']
     comentario = request.form['comentario']  
 
-    if cliente.enviar_datos_cliente(nombre, apellido, telefono, email, comentario):
+    if cliente.enviar_datos_cliente(nombre, apellido, telefono, email, combo, comentario):
         return jsonify({"mensaje": "Subscripción exitosa"}), 201
     else:
         return jsonify({"mensaje": "No fue posible registrar la subscripción"}), 400
