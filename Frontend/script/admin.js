@@ -40,7 +40,7 @@ document.getElementById('formularioGestion').addEventListener('submit', function
     const formData = new FormData();
     formData.append('gestion', gestion); // Agregar el detalle a los datos del formulario
 
-    fetch(`http://bks999.pythonanywhere.com/subscripcion/${id}`, {
+    fetch(`https://bks999.pythonanywhere.com/subscripcion/${id}`, {
         method: 'PUT',
         body: formData
     })

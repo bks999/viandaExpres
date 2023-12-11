@@ -4,7 +4,7 @@ document.getElementById('form-subscribe').addEventListener('submit', function (e
     const formData = new FormData(document.getElementById('form-subscribe'));
 
     // Realizar el envío utilizando fetch
-    fetch('http://bks999.pythonanywhere.com/subscripcion', {
+    fetch('https://bks999.pythonanywhere.com/subscripcion', {
         method: 'POST',
         body: formData
     })
