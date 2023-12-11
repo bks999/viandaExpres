@@ -6,7 +6,7 @@
 header {
     background-color: #5C8C3D;
     padding: 30px 0;
-    background-image: url("../images/background-image-color.jpg");
+    background-image: url("/Frontend/images/background-image-color.jpg");
     background-size: cover;
 }
 
